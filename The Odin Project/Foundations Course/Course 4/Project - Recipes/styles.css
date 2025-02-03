@@ -19,3 +19,15 @@ h1, h2, h3 {
 .special-step {
     color: lightseagreen;
 }
+
+.title {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu {
+    font-size: 30px;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+}
