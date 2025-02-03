@@ -1,1 +1,1 @@
-This exercise was completed in this [repository](https://github.com/zain-ahmed0/css-exercises).
+This exercise was completed in this [repository](https://github.com/zain-ahmed0/css-exercises/tree/main/foundations/intro-to-css).
