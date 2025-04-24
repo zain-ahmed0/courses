@@ -1,33 +1,37 @@
-h1, h2, h3 {
-    font-family: Verdana, sans-serif;
-    background-color: lightskyblue;
+h1,
+h2,
+h3 {
+	font-family: Verdana, sans-serif;
+	background-color: lightskyblue;
 }
 
-.special-paragraph, .special-ingredient, .special-step {
-    font-family: Georgia, sans-serif;
-    font-size: 15px;
+.special-paragraph,
+.special-ingredient,
+.special-step {
+	font-family: Georgia, sans-serif;
+	font-size: 15px;
 }
 
 .special-paragraph {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .special-ingredient {
-    color: darkslateblue;
+	color: darkslateblue;
 }
 
 .special-step {
-    color: lightseagreen;
+	color: lightseagreen;
 }
 
 .title {
-    padding: 10px;
-    text-align: center;
+	padding: 10px;
+	text-align: center;
 }
 
 .menu {
-    font-size: 30px;
-    padding: 5px;
-    margin: auto;
-    text-align: center;
+	font-size: 30px;
+	padding: 5px;
+	margin: auto;
+	text-align: center;
 }
