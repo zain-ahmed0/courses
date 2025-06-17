@@ -72,19 +72,15 @@ const divide = (num1, num2) => {
 const operate = (firstNumber, secondNumber) => {
 	if (operator === "+") {
 		const result = add(Number(firstNumber), Number(secondNumber));
-		output.textContent = result;
 		return result;
 	} else if (operator === "-") {
 		const result = subtract(Number(firstNumber), Number(secondNumber));
-		output.textContent = result;
 		return result;
 	} else if (operator === "*") {
 		const result = multiply(Number(firstNumber), Number(secondNumber));
-		output.textContent = result;
 		return result;
 	} else if (operator === "/") {
 		const result = divide(Number(firstNumber), Number(secondNumber));
-		output.textContent = result;
 		return result;
 	} else {
 		console.error("Invalid operator");
