@@ -68,7 +68,8 @@ button:hover {
 	color: white;
 }
 
-.number-button {
+.number-button,
+.number-placeholder-button {
 	background-color: #505050;
 	color: white;
 }
