@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 // Initialize constants
-
-#define QUARTER 25
-#define DIME 10
-#define NICKEL 5
-#define PENNY 1
+const int QUARTER = 25;
+const int DIME = 10;
+const int NICKEL = 5;
+const int PENNY = 1;
 
 int calculate_coins_used(int change);
 

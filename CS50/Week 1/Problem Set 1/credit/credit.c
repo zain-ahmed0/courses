@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // Initialize constant
-#define MAX_SINGLE_DIGIT 9
+const int MAX_SINGLE_DIGIT = 9;
 
 string valid_card(long card, long checkSum, long length);
 
