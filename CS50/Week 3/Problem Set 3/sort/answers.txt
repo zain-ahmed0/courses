@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: I knew that sort1 uses Bubble Sort because of it's time complexity being the largest compared to sort2 and sort 3. Bubble Sort has a complexity of O(n^2).
+
+sort2 uses: Merge Sort
+
+How do you know?: I knew that sort2 uses Merge Sort because of it's time complexity being lower than sort1 and sort3 and Merge Sort is faster than Bubble and Selection sort. Merge Sort has a complexity of O(nlogn).
+
+sort3 uses: Selection Sort
+
+How do you know?: I knew that sort3 uses Selection Sort because of it's time complexity being lower than sort1 but higher than sort2. Selection Sort has a complexity of O(n^2).
