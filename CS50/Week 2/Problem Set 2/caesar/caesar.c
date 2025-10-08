@@ -36,7 +36,7 @@ int main(int argc, string argv[])
 
     int key = atoi(argv[1]);
 
-    // Initalize length of text variable
+    // Initialize length of text variable
     int length_of_text = strlen(text);
 
     // Loop through each character and apply a shift and store the new character in a new variable

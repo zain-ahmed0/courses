@@ -41,7 +41,7 @@ int count_letters(string text)
     // Initialize variable
     int letters = 0;
 
-    // Initalize length of text variable
+    // Initialize length of text variable
     int length_of_text = strlen(text);
 
     // Loop through the text and count the letters
@@ -62,7 +62,7 @@ int count_words(string text)
     // Initialize variable
     int words = 0;
 
-    // Initalize length of text variable
+    // Initialize length of text variable
     int length_of_text = strlen(text);
 
     // Loop through the text and count the words
@@ -83,7 +83,7 @@ int count_sentences(string text)
     // Initialize variable
     int sentences = 0;
 
-    // Initalize length of text variable
+    // Initialize length of text variable
     int length_of_text = strlen(text);
 
     // Loop through the text and count the sentences

@@ -39,7 +39,7 @@ int compute_score(string word)
     // Initialize score variable
     int score = 0;
 
-    // Initalize length of word variable
+    // Initialize length of word variable
     int length_of_word = strlen(word);
 
     // Compute score for each character
