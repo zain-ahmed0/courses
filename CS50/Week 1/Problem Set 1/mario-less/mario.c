@@ -19,15 +19,15 @@ int main(void)
     for (int row = 0; row < height; row++)
     {
         // Calculates the number of spaces for each row
-        int numberOfSpaces = (height - 1) - row;
+        int number_of_spaces = (height - 1) - row;
 
-        print_spaces(numberOfSpaces);
+        print_spaces(number_of_spaces);
 
         print_bricks(row);
     }
 }
 
-// Logic to print the number of spaces
+// Function to print the number of spaces
 void print_spaces(int spaces)
 {
     for (int i = 0; i < spaces; i++)
@@ -36,7 +36,7 @@ void print_spaces(int spaces)
     }
 }
 
-// Logic to print the number of bricks
+// Function to print the number of bricks
 void print_bricks(int bricks)
 {
     for (int i = 0; i < bricks + 1; i++)

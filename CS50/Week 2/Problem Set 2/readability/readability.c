@@ -41,8 +41,11 @@ int count_letters(string text)
     // Initialize variable
     int letters = 0;
 
+    // Initalize length of text variable
+    int length_of_text = strlen(text);
+
     // Loop through the text and count the letters
-    for (int i = 0, length = strlen(text); i < length; i++)
+    for (int i = 0; i < length_of_text; i++)
     {
         if (isalpha(text[i]))
         {
@@ -59,8 +62,11 @@ int count_words(string text)
     // Initialize variable
     int words = 0;
 
+    // Initalize length of text variable
+    int length_of_text = strlen(text);
+
     // Loop through the text and count the words
-    for (int i = 0, length = strlen(text); i < length; i++)
+    for (int i = 0; i < length_of_text; i++)
     {
         if (isblank(text[i]))
         {
@@ -77,8 +83,11 @@ int count_sentences(string text)
     // Initialize variable
     int sentences = 0;
 
+    // Initalize length of text variable
+    int length_of_text = strlen(text);
+
     // Loop through the text and count the sentences
-    for (int i = 0, length = strlen(text); i < length; i++)
+    for (int i = 0; i < length_of_text; i++)
     {
         if (text[i] == '?' || text[i] == '!' || text[i] == '.')
         {

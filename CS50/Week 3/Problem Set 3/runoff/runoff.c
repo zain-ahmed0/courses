@@ -124,7 +124,7 @@ int main(int argc, string argv[])
     return 0;
 }
 
-// Record preference if vote is valid
+// Function to record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
     // Loop through the candidates and check if the name voted for, matches a candidate name
@@ -140,7 +140,7 @@ bool vote(int voter, int rank, string name)
     return false;
 }
 
-// Tabulate votes for non-eliminated candidates
+// Function to tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
     // Loop through 2D array and calculate the votes
@@ -164,11 +164,11 @@ void tabulate(void)
     return;
 }
 
-// Print the winner of the election, if there is one
+// Function to print the winner of the election, if there is one
 bool print_winner(void)
 {
     int half = (voter_count / 2) + 1;
-    
+
     // Loop through the candidates and check if the candidate vote count is higher than half
     for (int i = 0; i < candidate_count; i++)
     {
@@ -181,7 +181,7 @@ bool print_winner(void)
     return false;
 }
 
-// Return the minimum number of votes any remaining candidate has
+// Function that returns the minimum number of votes any remaining candidate has
 int find_min(void)
 {
     // Initialize variable
@@ -219,7 +219,7 @@ int find_min(void)
     return lowest_vote_count;
 }
 
-// Return true if the election is tied between all candidates, false otherwise
+// Function that returns true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
     // Loop through candidates to find if there is a tie
@@ -236,7 +236,7 @@ bool is_tie(int min)
     return true;
 }
 
-// Eliminate the candidate (or candidates) in last place
+// Function to eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
     // Loop through the candidates to find a candidate with the lowest vote count to eliminate

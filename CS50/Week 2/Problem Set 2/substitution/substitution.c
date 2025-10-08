@@ -16,14 +16,17 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (strlen(argv[1]) != 26)
+    // Initialize length of the key
+    int length_of_key = strlen(argv[1]);
+
+    if (length_of_key != 26)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
     }
 
     // Loop through the command line input to make sure the argument is a character
-    for (int i = 0, length = strlen(argv[1]); i < length; i++)
+    for (int i = 0; i < length_of_key; i++)
     {
         if (!isalpha(argv[1][i]))
         {
@@ -36,7 +39,7 @@ int main(int argc, string argv[])
     bool test[26] = {false};
 
     // Loop through the command line input to make sure the argument has no repeated characters
-    for (int i = 0, length = strlen(argv[1]); i < length; i++)
+    for (int i = 0; i < length_of_key; i++)
     {
         int index = toupper(argv[1][i]) - 'A';
         if (test[index])
@@ -56,22 +59,25 @@ int main(int argc, string argv[])
     // Initialize variables
     string key = argv[1];
 
-    char cipherText[1024] = "";
+    char cipher_text[1024] = "";
+
+    // Initialize length of text variable
+    int length_of_text = strlen(text);
 
     // Loop through each character and apply a shift and store the new character in a new variable
-    for (int i = 0, length = strlen(text); i < length; i++)
+    for (int i = 0; i < length_of_text; i++)
     {
         int character = text[i];
 
         char result = rotate(character, key);
 
-        cipherText[i] = result;
+        cipher_text[i] = result;
     }
 
-    cipherText[strlen(text)] = '\0';
+    cipher_text[length_of_text] = '\0';
 
     // Output the cipher text
-    printf("ciphertext: %s\n", cipherText);
+    printf("ciphertext: %s\n", cipher_text);
 
     printf("\n");
 
@@ -82,22 +88,22 @@ int main(int argc, string argv[])
 char rotate(char character, string key)
 {
     int shift = 0;
-    char newCharacter;
+    char new_character;
 
     if (islower(character))
     {
         shift = character - 'a';
-        newCharacter = tolower(key[shift]);
+        new_character = tolower(key[shift]);
     }
     else if (isupper(character))
     {
         shift = character - 'A';
-        newCharacter = toupper(key[shift]);
+        new_character = toupper(key[shift]);
     }
     else
     {
-        newCharacter = character;
+        new_character = character;
     }
 
-    return newCharacter;
+    return new_character;
 }

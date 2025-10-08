@@ -15,8 +15,11 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // Initialize length of the number variable
+    int length_of_number = strlen(argv[1]);
+
     // Loop through the command line input to make sure the argument is a digit
-    for (int i = 0, length = strlen(argv[1]); i < length; i++)
+    for (int i = 0; i < length_of_number; i++)
     {
         if (!isdigit(argv[1][i]))
         {
@@ -29,24 +32,27 @@ int main(int argc, string argv[])
     string text = get_string("plaintext:  ");
 
     // Initialize variables
-    char cipherText[1024] = "";
+    char cipher_text[1024] = "";
 
     int key = atoi(argv[1]);
 
+    // Initalize length of text variable
+    int length_of_text = strlen(text);
+
     // Loop through each character and apply a shift and store the new character in a new variable
-    for (int i = 0, length = strlen(text); i < length; i++)
+    for (int i = 0; i < length_of_text; i++)
     {
         char character = text[i];
 
         char result = rotate(character, key);
 
-        cipherText[i] = result;
+        cipher_text[i] = result;
     }
 
-    cipherText[strlen(text)] = '\0';
+    cipher_text[length_of_text] = '\0';
 
     // Output the cipher text
-    printf("ciphertext: %s\n", cipherText);
+    printf("ciphertext: %s\n", cipher_text);
 
     printf("\n");
 
@@ -57,22 +63,22 @@ int main(int argc, string argv[])
 char rotate(char character, int key)
 {
     int shift = 0;
-    char newCharacter;
+    char new_character;
 
     if (islower(character))
     {
         shift = ((character - 'a') + key) % 26;
-        newCharacter = 'a' + shift;
+        new_character = 'a' + shift;
     }
     else if (isupper(character))
     {
         shift = ((character - 'A') + key) % 26;
-        newCharacter = 'A' + shift;
+        new_character = 'A' + shift;
     }
     else
     {
-        newCharacter = character;
+        new_character = character;
     }
 
-    return newCharacter;
+    return new_character;
 }

@@ -33,13 +33,17 @@ int main(void)
     }
 }
 
+// Function to compute the word score
 int compute_score(string word)
 {
     // Initialize score variable
     int score = 0;
 
+    // Initalize length of word variable
+    int length_of_word = strlen(word);
+
     // Compute score for each character
-    for (int i = 0, len = strlen(word); i < len; i++)
+    for (int i = 0; i < length_of_word; i++)
     {
         if (isupper(word[i]))
         {

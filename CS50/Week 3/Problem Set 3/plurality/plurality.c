@@ -62,7 +62,7 @@ int main(int argc, string argv[])
     print_winner();
 }
 
-// Update vote totals given a new vote
+// Function to update vote totals given a new vote
 bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
@@ -76,7 +76,7 @@ bool vote(string name)
     return false;
 }
 
-// Print the winner (or winners) of the election
+// Function to print the winner (or winners) of the election
 void print_winner(void)
 {
     int highest_vote = 0;

@@ -39,7 +39,7 @@ int main(void)
     }
 }
 
-// Logic to print the number of spaces
+// Function to print the number of spaces
 void print_spaces(int spaces)
 {
     for (int i = 0; i < spaces; i++)
@@ -48,7 +48,7 @@ void print_spaces(int spaces)
     }
 }
 
-// Logic to print the number of left bricks
+// Function to print the number of left bricks
 void print_bricks(int bricks)
 {
     for (int i = 0; i < bricks + 1; i++)
