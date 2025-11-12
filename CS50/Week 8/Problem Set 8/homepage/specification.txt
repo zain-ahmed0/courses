@@ -1,0 +1,5 @@
+HTML Tags used: a, button, div, footer, li, main, nav, p, path, span, svg, ul
+
+CSS Properties used: color, text-shadow, letter-spacing, font-weight, transition and transform
+
+I used Bootstrap by using it's components and style. I used the following components, the navigation and footer bar and popovers. To enable the popovers to work I had to add some JavaScript code.

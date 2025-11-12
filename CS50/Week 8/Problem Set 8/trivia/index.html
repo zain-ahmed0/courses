@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const checkButtonAnswer = document.querySelectorAll("button");
+
+                const buttonSection = document.querySelector(".section:first-of-type");
+                const formSection = document.querySelector(".section:last-of-type");
+
+                const formButton = document.querySelector("input[type='submit']");
+                const formButtonAnswer = document.querySelector("input[type='text']");
+                const checkFormAnswer = document.querySelector("form");
+
+                const showFeedback = (message, targetSection) => {
+                    const oldFeedback = targetSection.querySelector(".feedback");
+                    if (oldFeedback) {
+                        oldFeedback.remove();
+                    }
+
+                    let element = document.createElement("div");
+
+                    element.classList.add("feedback");
+
+                    element.textContent = message;
+
+                    targetSection.appendChild(element);
+                };
+
+                checkButtonAnswer.forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    if (e.target.value === "Rhaegal") {
+                        e.target.style.color = "green";
+                        showFeedback("Correct!", buttonSection);
+                    } else {
+                        showFeedback("Incorrect", buttonSection);
+                        e.target.style.color = "red";
+                    }
+                    })
+                });
+
+                formButton.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    if (e.target) {
+                        if (formButtonAnswer.value.trim().toLowerCase() === "longclaw") {
+                            formButtonAnswer.style.backgroundColor = "green";
+                            showFeedback("Correct!", formSection);
+                        } else {
+                            formButtonAnswer.style.backgroundColor = "red";
+                            showFeedback("Incorrect", formSection);
+                        }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>In the TV show Game of Thrones, Danyeris dragons are (or were) called Drogon, Rhaegal, and ?</h3>
+
+                <button value="Dougal">Dougal</button>
+                <button value="Vhagar">Vhagar</button>
+                <button value="Rhaegal">Rhaegal</button> <!-- correct answer -->
+                <button value="Balerion">Balerion</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                 <h3>What is the name of John Snow's sword?</h3>
+                 <form>
+                    <input type="text">
+                    <input type="submit" value="Check Answer">
+                 </form>
+            </div>
+        </div>
+    </body>
+</html>

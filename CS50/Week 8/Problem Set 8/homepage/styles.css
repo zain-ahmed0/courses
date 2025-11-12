@@ -1,0 +1,12 @@
+.title-index-color {
+    color: #056070 !important;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    transition: color 0.3s ease, transform ease;
+}
+
+.title-index-color:hover {
+    color: #0891b2;
+    transform: scale(1.05);
+}
